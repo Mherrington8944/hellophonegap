@@ -1,22 +1,40 @@
-<!Doctype html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <h1>hello phonegap</h1>
-        <h2> I can't believe it's this simple. ... </h2>
-        <div id="connectionStatus" style="color:blue">Not connected to phonegap!</div>
-        <script src="cordova.js"></script>
-        <script>
-            var phonegapReady = function(){
-                oStatus = document.getElementById("connectionStatus");
-                oStatus.innerHTML = "Now connected to phonegap";
-                oStatus.style.color = "green";
-            }
+<!DOCTYPE html>
 
-            document.addEventListener("deviceready", phonegapReady, false);
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canada Quiz</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
 
-        </script>
-    </body>
+<body>
+<div class="grid">
+    <div id="quiz">
+        <h1>Canada Quiz</h1>
+        <hr style="margin-bottom: 20px">
+
+        <p id="question"></p>
+
+        <div class="buttons">
+            <button id="btn0"><span id="choice0"></span></button>
+            <button id="btn1"><span id="choice1"></span></button>
+            <button id="btn2"><span id="choice2"></span></button>
+            <button id="btn3"><span id="choice3"></span></button>
+        </div>
+
+        <hr style="margin-top: 50px">
+        <footer>
+            <p id="progress">Question x of y</p>
+        </footer>
+    </div>
+</div>
+
+<script src="cordova.js"></script>
+<script src="quiz_controller.js"></script>
+<script src="question.js"></script>
+<script src="app.js"></script>
+
+</body>
+
 </html>
